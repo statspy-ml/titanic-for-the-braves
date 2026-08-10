@@ -13,4 +13,7 @@ book:
 format:
   html:
     theme: cosmo
-    toc: true
+    css: custom.css
+    toc: false
+    grid:
+      body-width: 1400px

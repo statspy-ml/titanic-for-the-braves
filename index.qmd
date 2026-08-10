@@ -4,8 +4,12 @@ title: "Titanic for the Braves"
 
 # Machine Learning do zero ao avançado
 
+![](images.jpeg){width=600px}
+
 Este será o curso completo de Machine Learning usando o Titanic como laboratório.
 
-# Titanic for the Braves
+## Titanic for the Braves
 
-## Comece aqui
+### Comece aqui
+
+### Depois aqui

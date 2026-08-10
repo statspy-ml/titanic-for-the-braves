@@ -17,3 +17,5 @@ _site/
 # Jupyter
 .ipynb_checkpoints/
 **/*.quarto_ipynb
+
+/.quarto/
