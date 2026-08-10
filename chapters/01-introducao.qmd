@@ -1,0 +1,9 @@
+# Introdução
+
+Bem-vindo ao Titanic for the Braves.
+
+Este livro apresenta Machine Learning utilizando o dataset
+do Titanic como fio condutor.
+
+A proposta é começar pelos fundamentos e avançar progressivamente
+até conceitos sofisticados de Machine Learning.

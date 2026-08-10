@@ -1,27 +1,14 @@
 project:
-  type: website
-  render:
-    - index.qmd
-    - chapters/**/*.qmd
-    - lessons/**/*.ipynb
+  type: book
 
-website:
+book:
   title: "Titanic for the Braves"
+  author: "Rodrigo Toledo"
 
-  navbar:
-    left:
-      - href: index.qmd
-        text: "Início"
-      - text: "Curso"
-        menu:
-          - href: chapters/01-fundamentos.qmd
-            text: "01 — Fundamentos"
-          - href: chapters/02-dados.qmd
-            text: "02 — Dados"
-      - text: "Aulas"
-        menu:
-          - href: lessons/01-conhecendo-o-titanic.ipynb
-            text: "01 — Conhecendo o Titanic"
+  chapters:
+    - index.qmd
+    - chapters/01-introducao.qmd
+    - lessons/01-conhecendo-o-titanic.ipynb
 
 format:
   html:

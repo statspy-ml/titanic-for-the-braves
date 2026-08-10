@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Titanic for the Braves",
+    "section": "",
+    "text": "1 Machine Learning do zero ao avançado\nEste será o curso completo de Machine Learning usando o Titanic como laboratório.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Titanic for the Braves</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#comece-aqui",
+    "href": "index.html#comece-aqui",
+    "title": "Titanic for the Braves",
+    "section": "2.1 Comece aqui",
+    "text": "2.1 Comece aqui",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Titanic for the Braves</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01-introducao.html",
+    "href": "chapters/01-introducao.html",
+    "title": "2  Introdução",
+    "section": "",
+    "text": "Bem-vindo ao Titanic for the Braves.\nEste livro apresenta Machine Learning utilizando o dataset do Titanic como fio condutor.\nA proposta é começar pelos fundamentos e avançar progressivamente até conceitos sofisticados de Machine Learning.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "lessons/01-conhecendo-o-titanic.html",
+    "href": "lessons/01-conhecendo-o-titanic.html",
+    "title": "3  Conhecendo o Titanic",
+    "section": "",
+    "text": "Este é o primeiro laboratório do curso.\nAntes de construir modelos de Machine Learning, precisamos entender o problema, os dados e as variáveis disponíveis.\nNeste laboratório vamos:\n\ncarregar os dados;\nobservar sua estrutura;\ninvestigar as variáveis;\nprocurar valores ausentes;\ncomeçar a formular hipóteses.\n\n\nimport polars as pl\n\n\nprint(\"hello World!\")\n\nhello World!",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Conhecendo o Titanic</span>"
+    ]
+  }
+]
