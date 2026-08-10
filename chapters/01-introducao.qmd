@@ -17,9 +17,21 @@ flowchart LR
   C --> E[Result two]
 ```
 
+
+```{mermaid}
+flowchart TD
+    A[Dados] --> B[Limpeza]
+    B --> C[Treinamento]
+    C --> D[Modelo]
+```
+
+
+
+
+
 ::::: {#special .sidebar}
 
-::: {.warning}
+::: {.callout-warning}
 Here is a warning.
 :::
 
