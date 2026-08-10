@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -109,6 +109,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../custom.css">
@@ -204,17 +207,335 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>procurar valores ausentes;</li>
 <li>começar a formular hipóteses.</li>
 </ol>
-<div id="ee7b3458-feef-47d1-a0aa-8cf9baefaf06" class="cell" data-execution_count="1">
+<div id="ee7b3458-feef-47d1-a0aa-8cf9baefaf06" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="dea5cc91-3b1a-4ee8-8aa3-19f327336174" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"hello World!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>hello World!</code></pre>
+<blockquote class="blockquote">
+<p>Teste</p>
+</blockquote>
+<section id="primeiro-vamos-analisar-a-estrutura-do-arquivo-de-treino" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="primeiro-vamos-analisar-a-estrutura-do-arquivo-de-treino"><span class="header-section-number">3.1</span> Primeiro vamos analisar a estrutura do arquivo de treino</h2>
+<div id="bac8dc5c-c327-4032-989f-7111a3c27da4" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>train <span class="op">=</span> pl.read_csv(<span class="st">'../data/raw/train.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>train.head(<span class="dv">5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5, 12)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">PassengerId</th>
+<th data-quarto-table-cell-role="th">Survived</th>
+<th data-quarto-table-cell-role="th">Pclass</th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">Sex</th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">SibSp</th>
+<th data-quarto-table-cell-role="th">Parch</th>
+<th data-quarto-table-cell-role="th">Ticket</th>
+<th data-quarto-table-cell-role="th">Fare</th>
+<th data-quarto-table-cell-role="th">Cabin</th>
+<th data-quarto-table-cell-role="th">Embarked</th>
+</tr>
+<tr class="even">
+<td>i64</td>
+<td>i64</td>
+<td>i64</td>
+<td>str</td>
+<td>str</td>
+<td>f64</td>
+<td>i64</td>
+<td>i64</td>
+<td>str</td>
+<td>f64</td>
+<td>str</td>
+<td>str</td>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>"Braund, Mr. Owen Harris"</td>
+<td>"male"</td>
+<td>22.0</td>
+<td>1</td>
+<td>0</td>
+<td>"A/5 21171"</td>
+<td>7.25</td>
+<td>null</td>
+<td>"S"</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>"Cumings, Mrs. John Bradley (Fl…</td>
+<td>"female"</td>
+<td>38.0</td>
+<td>1</td>
+<td>0</td>
+<td>"PC 17599"</td>
+<td>71.2833</td>
+<td>"C85"</td>
+<td>"C"</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>"Heikkinen, Miss. Laina"</td>
+<td>"female"</td>
+<td>26.0</td>
+<td>0</td>
+<td>0</td>
+<td>"STON/O2. 3101282"</td>
+<td>7.925</td>
+<td>null</td>
+<td>"S"</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>"Futrelle, Mrs. Jacques Heath (…</td>
+<td>"female"</td>
+<td>35.0</td>
+<td>1</td>
+<td>0</td>
+<td>"113803"</td>
+<td>53.1</td>
+<td>"C123"</td>
+<td>"S"</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0</td>
+<td>3</td>
+<td>"Allen, Mr. William Henry"</td>
+<td>"male"</td>
+<td>35.0</td>
+<td>0</td>
+<td>0</td>
+<td>"373450"</td>
+<td>8.05</td>
+<td>null</td>
+<td>"S"</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O método <code>describe()</code> do polars entrega várias informações importantes:<br>
+No momento, vamos nos concentrar nas colunas com valores nulos <code>age</code>, <code>cabin</code> e <code>Embarked</code>.</p>
+</div>
+</div>
+<div id="8c028bd8-fa18-44de-ba31-a349b364ac97" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>train.describe()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (9, 13)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">statistic</th>
+<th data-quarto-table-cell-role="th">PassengerId</th>
+<th data-quarto-table-cell-role="th">Survived</th>
+<th data-quarto-table-cell-role="th">Pclass</th>
+<th data-quarto-table-cell-role="th">Name</th>
+<th data-quarto-table-cell-role="th">Sex</th>
+<th data-quarto-table-cell-role="th">Age</th>
+<th data-quarto-table-cell-role="th">SibSp</th>
+<th data-quarto-table-cell-role="th">Parch</th>
+<th data-quarto-table-cell-role="th">Ticket</th>
+<th data-quarto-table-cell-role="th">Fare</th>
+<th data-quarto-table-cell-role="th">Cabin</th>
+<th data-quarto-table-cell-role="th">Embarked</th>
+</tr>
+<tr class="even">
+<td>str</td>
+<td>f64</td>
+<td>f64</td>
+<td>f64</td>
+<td>str</td>
+<td>str</td>
+<td>f64</td>
+<td>f64</td>
+<td>f64</td>
+<td>str</td>
+<td>f64</td>
+<td>str</td>
+<td>str</td>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"count"</td>
+<td>891.0</td>
+<td>891.0</td>
+<td>891.0</td>
+<td>"891"</td>
+<td>"891"</td>
+<td>714.0</td>
+<td>891.0</td>
+<td>891.0</td>
+<td>"891"</td>
+<td>891.0</td>
+<td>"204"</td>
+<td>"889"</td>
+</tr>
+<tr class="even">
+<td>"null_count"</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>"0"</td>
+<td>"0"</td>
+<td>177.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>"0"</td>
+<td>0.0</td>
+<td>"687"</td>
+<td>"2"</td>
+</tr>
+<tr class="odd">
+<td>"mean"</td>
+<td>446.0</td>
+<td>0.383838</td>
+<td>2.308642</td>
+<td>null</td>
+<td>null</td>
+<td>29.699118</td>
+<td>0.523008</td>
+<td>0.381594</td>
+<td>null</td>
+<td>32.204208</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr class="even">
+<td>"std"</td>
+<td>257.353842</td>
+<td>0.486592</td>
+<td>0.836071</td>
+<td>null</td>
+<td>null</td>
+<td>14.526497</td>
+<td>1.102743</td>
+<td>0.806057</td>
+<td>null</td>
+<td>49.693429</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr class="odd">
+<td>"min"</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>"Abbing, Mr. Anthony"</td>
+<td>"female"</td>
+<td>0.42</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>"110152"</td>
+<td>0.0</td>
+<td>"A10"</td>
+<td>"C"</td>
+</tr>
+<tr class="even">
+<td>"25%"</td>
+<td>224.0</td>
+<td>0.0</td>
+<td>2.0</td>
+<td>null</td>
+<td>null</td>
+<td>20.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>null</td>
+<td>7.925</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr class="odd">
+<td>"50%"</td>
+<td>446.0</td>
+<td>0.0</td>
+<td>3.0</td>
+<td>null</td>
+<td>null</td>
+<td>28.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>null</td>
+<td>14.4542</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr class="even">
+<td>"75%"</td>
+<td>669.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>null</td>
+<td>null</td>
+<td>38.0</td>
+<td>1.0</td>
+<td>0.0</td>
+<td>null</td>
+<td>31.0</td>
+<td>null</td>
+<td>null</td>
+</tr>
+<tr class="odd">
+<td>"max"</td>
+<td>891.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>"van Melkebeke, Mr. Philemon"</td>
+<td>"male"</td>
+<td>80.0</td>
+<td>8.0</td>
+<td>6.0</td>
+<td>"WE/P 5735"</td>
+<td>512.3292</td>
+<td>"T"</td>
+<td>"S"</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
