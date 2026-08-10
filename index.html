@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rodrigo Toledo">
 
 <title>Titanic for the Braves</title>
 <style>
@@ -36,6 +37,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./chapters/01-introducao.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -45,13 +47,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d3f7f8e73c8d287b30bcf59c2b563615.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -77,73 +79,72 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Titanic for the Braves</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
-<span class="menu-text">Início</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-curso" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Curso</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-curso">    
-        <li>
-    <a class="dropdown-item" href="./chapters/01-fundamentos.qmd">
- <span class="dropdown-text">01 — Fundamentos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./chapters/02-dados.qmd">
- <span class="dropdown-text">02 — Dados</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-aulas" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Aulas</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-aulas">    
-        <li>
-    <a class="dropdown-item" href="./lessons/01-conhecendo-o-titanic.html">
- <span class="dropdown-text">01 — Conhecendo o Titanic</span></a>
-  </li>  
-    </ul>
-  </li>
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Titanic for the Braves</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Titanic for the Braves</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Titanic for the Braves</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/01-introducao.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lessons/01-conhecendo-o-titanic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conhecendo o Titanic</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#machine-learning-do-zero-ao-avançado" id="toc-machine-learning-do-zero-ao-avançado" class="nav-link active" data-scroll-target="#machine-learning-do-zero-ao-avançado">Machine Learning do zero ao avançado</a></li>
-  <li><a href="#titanic-for-the-braves" id="toc-titanic-for-the-braves" class="nav-link" data-scroll-target="#titanic-for-the-braves">Titanic for the Braves</a>
+  <li><a href="#machine-learning-do-zero-ao-avançado" id="toc-machine-learning-do-zero-ao-avançado" class="nav-link active" data-scroll-target="#machine-learning-do-zero-ao-avançado"><span class="header-section-number">1</span> Machine Learning do zero ao avançado</a></li>
+  <li><a href="#titanic-for-the-braves" id="toc-titanic-for-the-braves" class="nav-link" data-scroll-target="#titanic-for-the-braves"><span class="header-section-number">2</span> Titanic for the Braves</a>
   <ul class="collapse">
-  <li><a href="#comece-aqui" id="toc-comece-aqui" class="nav-link" data-scroll-target="#comece-aqui">Comece aqui</a></li>
+  <li><a href="#comece-aqui" id="toc-comece-aqui" class="nav-link" data-scroll-target="#comece-aqui"><span class="header-section-number">2.1</span> Comece aqui</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -160,6 +161,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rodrigo Toledo </p>
+          </div>
+  </div>
     
   
     
@@ -170,14 +177,14 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="machine-learning-do-zero-ao-avançado" class="level1">
-<h1>Machine Learning do zero ao avançado</h1>
+<section id="machine-learning-do-zero-ao-avançado" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Machine Learning do zero ao avançado</h1>
 <p>Este será o curso completo de Machine Learning usando o Titanic como laboratório.</p>
 </section>
-<section id="titanic-for-the-braves" class="level1">
-<h1>Titanic for the Braves</h1>
-<section id="comece-aqui" class="level2">
-<h2 class="anchored" data-anchor-id="comece-aqui">Comece aqui</h2>
+<section id="titanic-for-the-braves" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Titanic for the Braves</h1>
+<section id="comece-aqui" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="comece-aqui"><span class="header-section-number">2.1</span> Comece aqui</h2>
 
 
 </section>
@@ -257,7 +264,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/statspy-ml\.github\.io\/titanic-for-the-braves\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -584,6 +591,15 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./chapters/01-introducao.html" class="pagination-link" aria-label="Introdução">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introdução</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
