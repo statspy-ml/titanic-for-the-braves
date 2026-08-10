@@ -3,9 +3,25 @@ project:
   render:
     - index.qmd
     - chapters/**/*.qmd
+    - lessons/**/*.ipynb
 
 website:
   title: "Titanic for the Braves"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: "Início"
+      - text: "Curso"
+        menu:
+          - href: chapters/01-fundamentos.qmd
+            text: "01 — Fundamentos"
+          - href: chapters/02-dados.qmd
+            text: "02 — Dados"
+      - text: "Aulas"
+        menu:
+          - href: lessons/01-conhecendo-o-titanic.ipynb
+            text: "01 — Conhecendo o Titanic"
 
 format:
   html:
