@@ -10,11 +10,11 @@
     ]
   },
   {
-    "objectID": "index.html#comece-aqui",
-    "href": "index.html#comece-aqui",
+    "objectID": "index.html#titanic-for-the-braves",
+    "href": "index.html#titanic-for-the-braves",
     "title": "Titanic for the Braves",
-    "section": "2.1 Comece aqui",
-    "text": "2.1 Comece aqui",
+    "section": "1.1 Titanic for the Braves",
+    "text": "1.1 Titanic for the Braves\n\n1.1.1 Comece aqui\n\n\n1.1.2 Depois aqui",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Titanic for the Braves</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "chapters/01-introducao.html",
     "title": "2  Introdução",
     "section": "",
-    "text": "Bem-vindo ao Titanic for the Braves.\nEste livro apresenta Machine Learning utilizando o dataset do Titanic como fio condutor.\nA proposta é começar pelos fundamentos e avançar progressivamente até conceitos sofisticados de Machine Learning.",
+    "text": "Bem-vindo ao Titanic for the Braves.\nEste livro apresenta Machine Learning utilizando o dataset do Titanic como fio condutor.\nA proposta é começar pelos fundamentos e avançar progressivamente até conceitos sofisticados de Machine Learning.\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\nHere is a warning.\n\nMore content.\n\n\n\n\n\n\n\nNote\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nTipTip with Title\n\n\n\nThis is an example of a callout with a title.\n\n\n\n\n\n\n\n\nCautionExpand To Learn About Collapse\n\n\n\n\n\nThis is an example of a ‘folded’ caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introdução</span>"
     ]
