@@ -1,0 +1,21 @@
+[project]
+name = "ml-book"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Rodrigo Polverari Pacheco de Toledo", email = "rodrigo.pp.toledo@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "jupyterlab>=4.6.2",
+    "matplotlib>=3.11.1",
+    "plotly>=6.9.0",
+]
+
+[project.scripts]
+ml-book = "ml_book:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
